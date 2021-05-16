@@ -1,1 +1,0 @@
-TIMEOUT /T 10

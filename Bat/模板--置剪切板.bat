@@ -1,1 +1,0 @@
-type D:\My\POMIN\” œ‰.txt | clip

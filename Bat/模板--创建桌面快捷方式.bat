@@ -1,2 +1,0 @@
-@echo off
-mshta VBScript:Execute("Set a=CreateObject(""WScript.Shell""):Set b=a.CreateShortcut(a.SpecialFolders(""Desktop"") & ""\快捷方式名字.lnk""):b.TargetPath=""程序路径"":b.WorkingDirectory=""%~dp0"":b.Save:close")
