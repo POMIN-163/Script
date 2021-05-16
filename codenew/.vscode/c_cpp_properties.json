@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Proj",
+            "includePath": [
+                "D:\\Maker\\Console\\mingw64\\x86_64-w64-mingw32\\include",
+                codenewpy--inc
+            ],
+            "defines": [
+                "STM32F10X_HD",
+                "USE_STDPERIPH_DRIVER"
+            ],
+            "intelliSenseMode": "${default}"
+        }
+    ],
+    "version": 4
+}
