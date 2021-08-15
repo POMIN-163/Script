@@ -1,34 +1,34 @@
-::ShellExecute ·½·¨
+::ShellExecute æ–¹æ³•
 ::
-::×÷ÓÃ: ÓÃÓÚÔËÐÐÒ»¸ö³ÌÐò»ò½Å±¾¡£
+::ä½œç”¨: ç”¨äºŽè¿è¡Œä¸€ä¸ªç¨‹åºæˆ–è„šæœ¬ã€‚
 ::
-::Óï·¨
+::è¯­æ³•
 ::      .ShellExecute "application", "parameters", "dir", "verb", window
 ::      .ShellExecute 'some program.exe', '"some parameters with spaces"', , "runas", 1
 ::
-::¹Ø¼ü×Ö
-::   application   ÒªÔËÐÐµÄ³ÌÐò»ò½Å±¾Ãû³Æ
-::   parameters    ÔËÐÐ³ÌÐò»ò½Å±¾ËùÐèµÄ²ÎÊý
-::   dir           ¹¤×÷Â·¾¶£¬ÈôÎ´Ö¸¶¨ÔòÊ¹ÓÃµ±Ç°Â·¾¶
-::   verb          ÒªÖ´ÐÐµÄ¶¯×÷ (Öµ¿ÉÒÔÊÇ runas/open/edit/print)
-::                   runas ¶¯×÷Í¨³£ÓÃÓÚÌáÉýÈ¨ÏÞ
-::   window        ³ÌÐò»ò½Å±¾Ö´ÐÐÊ±µÄ´°¿ÚÑùÊ½ (normal=1, hide=0, 2=Min, 3=max, 4=restore, 5=current, 7=min/inactive, 10=default)
+::å…³é”®å­—
+::   application   è¦è¿è¡Œçš„ç¨‹åºæˆ–è„šæœ¬åç§°
+::   parameters    è¿è¡Œç¨‹åºæˆ–è„šæœ¬æ‰€éœ€çš„å‚æ•°
+::   dir           å·¥ä½œè·¯å¾„ï¼Œè‹¥æœªæŒ‡å®šåˆ™ä½¿ç”¨å½“å‰è·¯å¾„
+::   verb          è¦æ‰§è¡Œçš„åŠ¨ä½œ (å€¼å¯ä»¥æ˜¯ runas/open/edit/print)
+::                   runas åŠ¨ä½œé€šå¸¸ç”¨äºŽæå‡æƒé™
+::   window        ç¨‹åºæˆ–è„šæœ¬æ‰§è¡Œæ—¶çš„çª—å£æ ·å¼ (normal=1, hide=0, 2=Min, 3=max, 4=restore, 5=current, 7=min/inactive, 10=default)
 @echo off
-set sudo___temp=%1 %2 %3 %4 %5 %6 %7 %8 %9
-set sudo___file=%TEMP%\sudo.txt
+set sudo_temp=%*
+set sudo_file=%TEMP%\sudo.txt
 :file
 
-if exist %sudo___file% del /f /q %sudo___file%
-if exist %sudo___file% set sudo___file=%TEMP%\sudo%random%.txt
+if exist %sudo_file% del /f /q %sudo_file%
+if exist %sudo_file% set sudo_file=%TEMP%\sudo%random%.txt
 
-mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %sudo___temp% > %sudo___file%","","runas",0)(window.close)
+mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %sudo_temp% > %sudo_file%","","runas",0)(window.close)
 
-:: Êä³öÎÄ¼þ
+:: è¾“å‡ºæ–‡ä»¶
 :wait
-if not exist %sudo___file% (
+if not exist %sudo_file% (
 	TIMEOUT /T 1 > nul
 	goto wait
 )
-::ÑÓÊ±µÈ´ý
-:: echo %sudo___file%
-type %sudo___file%
+::å»¶æ—¶ç­‰å¾…
+:: echo %sudo_file%
+type %sudo_file%

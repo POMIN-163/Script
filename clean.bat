@@ -10,13 +10,13 @@ if "%1"=="comx" (
 	goto comx
 )
 echo .........................................................
-echo Please set arg: icon: Í¼±ê»º´æ  temp: ÏµÍ³»º´æ  comx: ¶Ë¿ÚºÅ
+echo Please set arg: icon: å›¾æ ‡ç¼“å­˜  temp: ç³»ç»Ÿç¼“å­˜  comx: ç«¯å£å·
 goto end
 :icon
-	echo É¾Í¼±ê»º´æ¼°ÈÎÎñÀ¸ÎŞĞ§Í¼±ê
+	echo åˆ å›¾æ ‡ç¼“å­˜åŠä»»åŠ¡æ æ— æ•ˆå›¾æ ‡
 	echo .........................................................
 	taskkill /f /im explorer.exe
-	:: ÇåÀíÏµÍ³Í¼±ê»º´æÊı¾İ¿â
+	:: æ¸…ç†ç³»ç»Ÿå›¾æ ‡ç¼“å­˜æ•°æ®åº“
 	attrib -h -s -r "%userprofile%\AppData\Local\IconCache.db"
 	del /f "%userprofile%\AppData\Local\IconCache.db"
 	start explorer
@@ -24,7 +24,7 @@ goto end
 	reg delete "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify" /v PastIconsStream /f
 	goto end
 :temp
-	echo ÇåÀíÏµÍ³»º´æ
+	echo æ¸…ç†ç³»ç»Ÿç¼“å­˜
 	echo .........................................................
 	del /f /s /q %systemdrive%\*.tmp
 	del /f /s /q %systemdrive%\*._mp
@@ -41,10 +41,10 @@ goto end
 	del /f /s /q "%userprofile%\Local Settings\Temporary Internet Files\*.*"
 	del /f /s /q "%userprofile%\Local Settings\Temp\*.*"
 	del /f /s /q "%userprofile%\recent\*.*"
-	echo ÇåÀíÏµÍ³»º´æÍê±Ï
+	echo æ¸…ç†ç³»ç»Ÿç¼“å­˜å®Œæ¯•
 	goto end
 :comx
-	echo ÇåÀíËùÓĞ´®ĞĞ¶Ë¿Ú (ÇåÀíÍê±ÏºóĞèÒªÖØÆô)
+	echo æ¸…ç†æ‰€æœ‰ä¸²è¡Œç«¯å£ (æ¸…ç†å®Œæ¯•åéœ€è¦é‡å¯)
 	reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\COM Name Arbiter" /v ComDB /f
 	reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\COM Name Arbiter\Devices" /va /f
 	goto end

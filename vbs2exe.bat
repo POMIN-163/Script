@@ -1,14 +1,14 @@
 @echo off
-echo ±àÒë%1%ÖĞ....
+echo ç¼–è¯‘%1%ä¸­....
 set defaultIco=E:\Beauty\logo\logo.ico
 If "%1"=="" (
-    echo vbsÎÄ¼ş²»´æÔÚ
+    echo vbsæ–‡ä»¶ä¸å­˜åœ¨
     goto end
 ) else (
     set vbs=%cd%\%1
 )
 If "%2"=="" (
-    echo exeÎÄ¼şÎ´Ö¸¶¨
+    echo exeæ–‡ä»¶æœªæŒ‡å®š
     goto end
 ) else (
     set exe=%cd%\%2

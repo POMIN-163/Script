@@ -1,6 +1,9 @@
 @echo off
-echo »ñÈ¡±¾»ú Windows ¼¤»îÃÜÔ¿
+
+echo è·å–æœ¬æœº Windows æ¿€æ´»å¯†é’¥
+
 echo .........................................................
 explorer %~dp0script\getwinkey.vbs
+TIMEOUT /T 3 /NOBREAK
 type %TEMP%\WindowsKey.txt
 echo .........................................................
