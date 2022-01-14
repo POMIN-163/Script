@@ -29,4 +29,5 @@ rem explorer %a%
 set now_path=%~dp0
 cd %~dp0bin\pyOCD
 pyocd.exe flash --target="%target%" --erase=auto --frequency=%frequency% %bin%
+::pyocd.exe flash --target="STM32F103C8" --erase=auto --frequency=10000000 %bin%
 cd now_path

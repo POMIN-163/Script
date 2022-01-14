@@ -29,14 +29,14 @@ if arg_num == 1:
 elif arg_num == 2:
     com = sys.argv[1]
     cmd = 'plink.exe -serial ' + com + ' -sercfg ' + baudrate + ','+ databits + ',' + parity + ',' + stopbits + ',' + flowctrl
-    cmd = 'echo ' + cmd + '> temp.bat && echo del %0 >> temp.bat'
-    os.system(cmd)
+    while 2 > 1 :
+    	os.system(cmd)
 elif arg_num == 3:
     com = sys.argv[1]
     baudrate = sys.argv[2]
     cmd = 'plink.exe -serial ' + com + ' -sercfg ' + baudrate + ','+ databits + ',' + parity + ',' + stopbits + ',' + flowctrl
-    cmd = 'echo ' + cmd + '> temp.bat && echo del %0 >> temp.bat'
-    os.system(cmd)
+    while 2 > 1 :
+    	os.system(cmd)
 elif arg_num == 7:
     com = sys.argv[1]
     baudrate = sys.argv[2]
@@ -45,6 +45,6 @@ elif arg_num == 7:
     stopbits = sys.argv[5]
     flowctrl = sys.argv[6]
     cmd = 'plink.exe -serial ' + com + ' -sercfg ' + baudrate + ','+ databits + ',' + parity + ',' + stopbits + ',' + flowctrl
-    cmd = 'echo ' + cmd + '> temp.bat && echo del %0 >> temp.bat'
-    os.system(cmd)
+    while 2 > 1 :
+    	os.system(cmd)
 

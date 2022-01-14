@@ -18,7 +18,6 @@ if "%1"=="." (
         python %~dp0script\connect_serial.py %*
 
         echo connecting...
-        temp.bat
     )
 )
 

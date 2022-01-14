@@ -15,6 +15,7 @@
     #ifdef stm32
         #define __CC_ARM
         #define STM32F10X_MD // F1
+        // #define STM32F103xB
         // #define STM32F40_41xxx // F4
         #define STM32F407xx // F407
         #define USE_STDPERIPH_DRIVER // 标准库
