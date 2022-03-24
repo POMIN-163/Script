@@ -1,3 +1,4 @@
+:: 获取本机 Windows 激活密钥
 @echo off
 
 echo 获取本机 Windows 激活密钥

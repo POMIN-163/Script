@@ -17,7 +17,7 @@ find . -name '*.PrjPcbStructure' -print -exec rm -rf {} \;
 find . -name '*.PrjPCBStructure' -print -exec rm -rf {} \;
 find . -name '*.htm' -print -exec rm -rf {} \;
 #find . -name '*.zip' -print -exec rm -rf {} \;
-find . -name '*.rar' -print -exec rm -rf {} \;
+#find . -name '*.rar' -print -exec rm -rf {} \;
 
 
 # find . -name '*PcbLib' -print -exec rm -rf {} \;
