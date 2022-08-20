@@ -14,4 +14,4 @@ echo ""
 echo "idf.py.exe --port com24 --monitor-baud 921600 monitor"
 echo ""
 
-idf.py.exe --port com24 --baud 921600 monitor
+idf.py.exe monitor --port com24

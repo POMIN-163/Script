@@ -1,7 +1,7 @@
 chcp 65001
 $path_abs = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$c_ = "pn_"+$args[0]+".cpp"
-$h_ = "pn_"+$args[0]+".hpp"
+$c_ = ""+$args[0]+".cpp"
+$h_ = ""+$args[0]+".hpp"
 
 cp $path_abs/src/pn_template.c $c_
 cp $path_abs/src/pn_template.h $h_

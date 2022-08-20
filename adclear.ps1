@@ -15,4 +15,4 @@ $path_abs = $path_abs -replace "J:", "j"
 $path_abs = $path_abs -replace "K:", "k"
 $path_abs = "/mnt/" + $path_abs
 
-wsl "$path_abs/script_sh/clear_ad.sh"
+wsl "$path_abs/script/clear_ad.sh"

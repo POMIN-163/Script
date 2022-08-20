@@ -1,3 +1,3 @@
 @echo off
 
-python D:\ProgramTools\script\tipserial.py
+D:\Maker\Anaconda\python.exe D:\ProgramTools\script\tipserial.py

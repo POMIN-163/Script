@@ -22,14 +22,14 @@ port_list_last = list('')
 list2arr = []
 list2arr_last = []
 ico_path = os.path.dirname(os.path.abspath(__file__)) + "\\tip.ico"
-speak_en = True
+speak_en = False
 
 '''
 win10 消息提醒
 '''
 def my_tip(title_="提示", msg_=""):
     toaster.show_toast(
-        title=title_, msg=msg_, icon_path=ico_path, duration=3, threaded=True
+        title=title_, msg=msg_, icon_path=ico_path, duration=6, threaded=True
     )
 
 '''
