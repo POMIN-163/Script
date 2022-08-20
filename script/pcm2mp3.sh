@@ -1,0 +1,1 @@
+ffmpeg -y -f s16be -ac 2 -ar 16000 -acodec pcm_s16le -i $1 $2
