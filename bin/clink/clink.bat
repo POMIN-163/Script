@@ -32,12 +32,12 @@ if "%1"=="" (
 
 :: Pass through to appropriate loader.
 if /i "%processor_architecture%"=="x86" (
-        "%~dp0\bin\clink\clink_x86.exe" %*
+        "%~dp0\clink_x86.exe" %*
 ) else if /i "%processor_architecture%"=="amd64" (
     if defined processor_architew6432 (
-        "%~dp0\bin\clink\clink_x86.exe" %*
+        "%~dp0\clink_x86.exe" %*
     ) else (
-        "%~dp0\bin\clink\clink_x64.exe" %*
+        "%~dp0\clink_x64.exe" %*
     )
 )
 
@@ -51,7 +51,6 @@ goto :eof
 setlocal
 set WT_PROFILE_ID=
 set WT_SESSION=
-::start "Clink" cmd.exe /s /k ""%~dpnx0" inject %clink_profile_arg%%clink_quiet_arg%"
-cmd /k "chcp 65001 && "%~dpnx0" inject %clink_profile_arg%%clink_quiet_arg%"
+start "Clink" cmd.exe /s /k ""%~dpnx0" inject %clink_profile_arg%%clink_quiet_arg%"
 endlocal
 exit /b 0
