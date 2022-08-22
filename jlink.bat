@@ -2,9 +2,7 @@
 
 color b
 
-C:
+"C:\Program Files\SEGGER\JLink\JLinkRTTClient.exe"
 
-cd "C:\Program Files\SEGGER\JLink"
 
-JLinkRTTClient.exe
 

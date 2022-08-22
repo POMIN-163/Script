@@ -2,5 +2,6 @@
 assets
 old*
 
-
+*.o
+*.obj
 
